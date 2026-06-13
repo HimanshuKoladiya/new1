@@ -89,7 +89,7 @@ if prompt := st.chat_input("I'm feeling overwhelmed..."):
     else:
         # 3. Call Gemini
         safe_prompt = mask_pii(prompt)
-        api_key = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
+        api_key = st.secrets.get("GEMINI_API_KEY", "AIzaSyCoIH_Fx4baVTAb9LHPCcqDZNI7Pv2SY78")
         
         if not api_key:
             st.error("GEMINI_API_KEY is not set in Streamlit secrets!")
